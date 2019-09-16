@@ -99,7 +99,7 @@ bogus-priv
 conf-file=/etc/dnsmasq.d/ad.conf
 
 # 设定域名解析缓存池大小
-cache-size=24000" >> /etc/dnsmasq.conf
+cache-size=256000" >> /etc/dnsmasq.conf
 	echo
 fi
 sleep 3
@@ -121,10 +121,14 @@ nameserver 127.0.0.1
 	rm -rf /etc/dnsmasq/resolv /tmp/resolv
 	echo "
 # 主流公共DNS查询服务器
-nameserver 114.114.114.114
 nameserver 112.4.0.55
-nameserver 221.131.143.69
-nameserver 2409:8020:2000::88" >> /etc/dnsmasq/resolv.conf
+nameserver 2409:8020:2000::88
+nameserver 114.114.114.119
+nameserver 119.29.29.29
+nameserver 114.114.114.114
+nameserver 202.38.93.153
+nameserver 202.141.162.123
+nameserver 221.131.143.69" >> /etc/dnsmasq/resolv.conf
 	echo
 fi
 sleep 3
@@ -172,10 +176,10 @@ echo -e "\e[1;36m 下载easylistchina广告规则\e[0m"
 wget --no-check-certificate -q -O /tmp/easylistchina.conf https://c.nnjsx.cn/GL/dnsmasq/update/adblock/easylistchina.txt
 echo
 echo -e "\e[1;36m 下载yhosts缓存\e[0m"
-wget --no-check-certificate -q -O /tmp/yhosts.conf https://raw.githubusercontent.com/vokins/yhosts/master/hosts.txt
+wget --no-check-certificate -q -O /tmp/yhosts.conf https://raw.githubusercontent.com/vokins/yhosts/master/hosts
 echo
 echo -e "\e[1;36m 下载malwaredomainlist规则\e[0m"
-wget --no-check-certificate -q -O /tmp/mallist https://raw.githubusercontent.com/vokins/yhosts/master/hosts.txt
+wget --no-check-certificate -q -O /tmp/mallist https://raw.githubusercontent.com/hcym/dnsmasq/master/hosts
 echo
 sleep 3
 echo -e "\e[1;36m 创建用户自定规则缓存\e[0m"
