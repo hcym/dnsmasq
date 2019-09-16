@@ -121,6 +121,8 @@ nameserver 127.0.0.1
 	rm -rf /etc/dnsmasq/resolv /tmp/resolv
 	echo "
 # 主流公共DNS查询服务器
+nameserver 180.76.76.76
+nameserver 240c::6666
 nameserver 112.4.0.55
 nameserver 2409:8020:2000::88
 nameserver 114.114.114.119
