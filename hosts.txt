@@ -1,28 +1,4 @@
 # 
-address=/localhost/127.0.0.1
-address=/localhost/::
-address=/localhost/::0
-address=/localhost/::1
-address=/localhost/127.0.0.1
-address=/ip6-localhost/::1
-address=/ip6-loopback/::1
-#    tv002.com          1.chcx.cn      bllzgqbyp			g00.msn.com
-# address=/ebioweb.com/127.0.0.1
-# address=/dm.jb51.net/127.0.0.1
-# 				falundafa.org	minghui.org	epochtimes.com
-# TRIANGLESERVICESLTD.COM 
-# 	XiaoQiang	  asia  	atianqi   address=/bdimg.com/127.0.0.1
-## ## address=/simba.taobao.com/127.0.0.1
-#    address=/render.alipay.com/127.0.0.1
-#	address=//127.0.0.1
-#	address=/baidu.cn/127.0.0.1	
-#	103.49.209.27		address=/qq.com/127.0.0.1
-#	address=/aa.gushiwen.org/127.0.0.1			weather
-#	address=/yijiuningyia.gushiwen.org/127.0.0.1		elb.amazonaws.com
-#	address=/bootcss.com/127.0.0.1
-#	address=/akamaihd.net/127.0.0.1		
-#	address=/akamaized.net/127.0.0.1
-#	address=/dangbei.net/127.0.0.1
 
 address=/ga/127.0.0.1
 address=/cnbetacdn.com/127.0.0.1
