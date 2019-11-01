@@ -99,7 +99,7 @@ bogus-priv
 conf-file=/etc/dnsmasq.d/ad.conf
 
 # 设定域名解析缓存池大小
-cache-size=256000" >> /etc/dnsmasq.conf
+cache-size=2500" >> /etc/dnsmasq.conf
 	echo
 fi
 sleep 3
@@ -175,13 +175,13 @@ echo -e "\e[1;36m 下载vokins广告规则\e[0m"
 wget --no-check-certificate -q -O /tmp/ad.conf https://raw.githubusercontent.com/clion007/dnsmasq/master/union.conf
 echo
 echo -e "\e[1;36m 下载easylistchina广告规则\e[0m"
-wget --no-check-certificate -q -O /tmp/easylistchina.conf https://c.nnjsx.cn/GL/dnsmasq/update/adblock/easylistchina.txt
+wget --no-check-certificate -q -O /tmp/easylistchina.conf https://raw.githubusercontent.com/hcym/dnsmasq/master/hosts.txt
 echo
 echo -e "\e[1;36m 下载yhosts缓存\e[0m"
-wget --no-check-certificate -q -O /tmp/yhosts.conf https://raw.githubusercontent.com/vokins/yhosts/master/hosts
+wget --no-check-certificate -q -O /tmp/yhosts.conf https://raw.githubusercontent.com/vokins/yhosts/master/hosts.txt
 echo
 echo -e "\e[1;36m 下载malwaredomainlist规则\e[0m"
-wget --no-check-certificate -q -O /tmp/mallist https://raw.githubusercontent.com/hcym/dnsmasq/master/hosts
+wget --no-check-certificate -q -O /tmp/mallist https://raw.githubusercontent.com/vokins/yhosts/master/hosts
 echo
 sleep 3
 echo -e "\e[1;36m 创建用户自定规则缓存\e[0m"
@@ -310,7 +310,7 @@ if [ ! $? -eq 0 ]; then
 		read reboottime
 		echo "$reboottime" > /etc/crontabs/reboottime.conf
 		echo "# 每天$reboottime点05分重启路由器
-04 $reboottime * * * sleep 1m && touch /etc/banner && reboot" >> $CRON_FILE
+27 $reboottime * * * sleep 1m && touch /etc/banner && reboot" >> $CRON_FILE
 		/etc/init.d/cron reload
 		echo
 		echo -e "\e[1;36m 定时重启任务设定完成\e[0m"
