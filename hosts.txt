@@ -4229,7 +4229,6 @@ address=/sdycd.com/127.0.0.1
 address=/sdytsh.com/127.0.0.1
 address=/searchcloud.app/127.0.0.1
 address=/seerpiu002.com/127.0.0.1
-address=/segment.com/127.0.0.1
 address=/self-study-service.com.cn/127.0.0.1
 address=/serving-sys.com/127.0.0.1
 address=/sezvc.com/127.0.0.1
